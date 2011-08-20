@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var colors = require('colors'),
+    argv   = require('optimist').argv,
+    print  = console.log,
+    Dunce  = require('..').Dunce,
+    PORT   = 4000;
+
+if (argv.help) {
+  print("usage: " + "dunce".bold + " [-p [--port] <port>]");
+  process.kill();
+}
+
+if (argv.port) PORT = argv.port
+if (argv.p) PORT = argv.p
+
+print("=> " + "Starting Dunce".green + " on port " + PORT.toString().blue)
+Dunce.createServer(function (req, res) {
+  print("-- " + req.method.yellow + " " + req.url);
+}).listen(PORT);

@@ -1,0 +1,23 @@
+{ 
+  "name": "dunce",
+  "description": "A PHP development server",
+  "author": "Ben Mills",
+  "version": "0.0.1",
+  "repository": { 
+    "type": "git",
+    "url": "https://github.com/benmills/dunce.git"
+  },
+  "main": "./lib",
+  "bin": { "dunce": "./bin/dunce" },
+  "dependencies": {
+    "colors": ">= 0.5.0",
+    "optimist": "> =0.2.6"
+  },
+  "devDependencies": { 
+    "coffee-script": ">=1.1.1",
+    "vows": ">=0.5.10"
+  },
+  "engines": { 
+    "node": "~0.4"
+  }
+}

@@ -1,0 +1,43 @@
+Dunce
+===============
+
+Dunce is an easy to use PHP development server that will get your PHP apps running in minutes.
+
+Install
+--------------
+
+You can install Dunce using npm or build it yourself.
+
+```bash
+npm install dunce
+```
+
+```bash
+git clone https://github.com/benmills/dunce.git
+cd dunce
+npm install . --dev
+cake build
+```
+You can now move `bin/dunce` to somewhere on your path so you can use the command line tool and move `lib/index.js` onto your node path as `dunce`.
+
+Usage
+---------------
+
+Server all PHP files from the directory you're currently in with one command.
+
+```bash
+dunce
+```
+
+Set the port with `-p` or `--port`.
+
+```bash
+dunce --port 4444
+```
+
+You can also use dunce in a node project.
+
+```javascript
+var Dunce = require('dunce').Dunce
+Dunce.createServer(function (req, res) { }).listen(4000);
+```
